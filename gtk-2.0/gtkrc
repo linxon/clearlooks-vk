@@ -1,0 +1,124 @@
+
+gtk-auto-mnemonics = 1
+gtk-primary-button-warps-slider = 1
+
+# Edit these colors and fonts however you like.
+style "default"
+{
+  GtkOptionMenu::indicator_spacing = { 3, 2, 1, 1 }
+  GtkEntry::progress-border = { 2, 2, 2, 2 }
+  GtkRange::slider_width = 14
+  GtkRange::stepper_size = 14
+  GtkScrollbar::min_slider_length = 14
+  GtkCheckButton::indicator_size = 10
+  GtkCheckMenuItem::indicator_size = 10
+  GtkButton::default_border = { 0, 0, 0, 0 }
+  GtkButton::image-spacing = 4
+  GtkToolButton::icon-spacing = 4
+  GtkCheckButton::indicator-size = 14
+  GtkEntry::invisible-char = 0x2022
+  GtkPaned::handle-size = 6
+  GtkRange::trough-border = 0
+  GtkScale::slider-length = 23
+  GtkScale::trough-side-details = 1
+  GtkScrollbar::min-slider-length = 30
+  GtkMenuBar::internal-padding = 0
+  GtkExpander::expander-size = 16
+  GtkToolbar::internal-padding = 1
+  GtkTreeView::expander-size = 14
+  GtkTreeView::vertical-separator = 0
+
+  GtkMenu::horizontal-padding = 0
+  GtkMenu::vertical-padding = 0
+
+  fg[NORMAL]        = "#000000"
+  fg[ACTIVE]        = "#000000"
+  fg[PRELIGHT]      = "#000000"
+  fg[SELECTED]      = "#FFFFFF"
+  fg[INSENSITIVE]   = "#747474"
+  bg[NORMAL]        = "#EDECEB"
+  bg[ACTIVE]        = "#D0CECC"
+  bg[PRELIGHT]      = "#E5E5F7"
+  bg[SELECTED]      = "#507299"
+  bg[INSENSITIVE]   = "#EDECEB"
+  base[NORMAL]      = "#FFFFFF"
+  base[ACTIVE]      = "#507299"
+  base[PRELIGHT]    = "#E5E5F7"
+  base[SELECTED]    = "#507299"
+  base[INSENSITIVE] = "#E5EFF7"
+  text[NORMAL]      = "#000000"
+  text[ACTIVE]      = "#FFFFFF"
+  text[PRELIGHT]    = "#000000"
+  text[SELECTED]    = "#FFFFFF"
+  text[INSENSITIVE] = "#747474"
+
+  #font_name = "Sans 10"
+  engine "default-theme"
+  {
+    # Do you want the scrollbar handles rectangular or a bit shaped?
+    rect_scrollbar = TRUE
+
+    # The following variables are semi-generic, can be applied to
+    # different widget classes etc..
+
+    # Mark type 1 is used on scrollbar handles, handleboxes etc
+    # Can be: NOTHING, SLASH, INVSLASH, DOT, INVDOT
+    mark_type1 = DOT
+
+    # Mark type 2 is used on scrollbar buttons
+    # Can be: NOTHING, SLASH, INVSLASH, DOT, INVDOT, ARROW
+    #mark_type2 = ARROW
+
+    # How to draw paned stuff
+    # Can be: NONE, SOME (currently 5), FULL
+    paned_dots = NONE
+
+    animation = FALSE
+    style = GUMMY
+
+    fix_broken_scroll_bar = true
+
+    hint = "use-hints"
+  }
+}
+
+style "tooltips" {
+  bg[NORMAL] = "#EEE1B3"
+  fg[NORMAL] = "#000000"
+}
+
+style "progress-bar" {
+  bg[PRELIGHT] = "#336699"
+  fg[PRELIGHT] = "#FFFFFF"
+  bg[NORMAL]   = "#C2C2CB"
+}
+
+style "menu-item" {
+  bg[PRELIGHT]   = "#336699"
+  fg[PRELIGHT]   = "#FFFFFF"
+  base[PRELIGHT] = "#336699"
+  text[PRELIGHT] = "#FFFFFF"
+}
+
+style "entry" {
+  bg[SELECTED] = "#C9D2F5"
+  fg[SELECTED] = "#000000"
+}
+
+style "wide" {
+	xthickness = 2
+	ythickness = 2
+}
+
+class "GtkWidget" style "default"
+widget "gtk-tooltip*" style "tooltips"
+class "GtkProgressBar" style "progress-bar"
+class "*MenuItem*" style "menu-item"
+class "GtkEntry" style "entry"
+widget_class "*MenuItem*" style "menu-item"
+widget_class "*.GtkAccelMenuItem.*" style "menu-item"
+widget_class "*.GtkRadioMenuItem.*" style "menu-item"
+widget_class "*.GtkCheckMenuItem.*" style "menu-item"
+widget_class "*.GtkImageMenuItem.*" style "menu-item"
+widget_class "*.GtkSeparatorMenuItem.*" style "menu-item"
+widget_class "*.GtkRadioMenuItem.*" style "menu-item"

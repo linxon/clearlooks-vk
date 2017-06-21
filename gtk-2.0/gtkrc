@@ -1,4 +1,3 @@
-
 gtk-auto-mnemonics = 1
 gtk-primary-button-warps-slider = 1
 
@@ -30,6 +29,8 @@ style "default"
 
   GtkMenu::horizontal-padding = 0
   GtkMenu::vertical-padding = 0
+  GtkMenuBar::window-dragging = 1
+  GtkWidget::window-dragging = 1
 
   fg[NORMAL]        = "#000000"
   fg[ACTIVE]        = "#000000"
@@ -72,6 +73,7 @@ style "default"
     # How to draw paned stuff
     # Can be: NONE, SOME (currently 5), FULL
     paned_dots = NONE
+    menubarstyle = 2
 
     animation = FALSE
     style = GUMMY

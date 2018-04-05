@@ -11,7 +11,7 @@ title_alignment=left
 #  M = Развернуть (maximize)
 #  C = Закрыть (close)
 #  | = Текст (title)
-button_layout=O|TSHMC
+button_layout=O|HMC
 
 maximized_offset=0
 shadow_delta_height=2
